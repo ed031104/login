@@ -1,0 +1,69 @@
+﻿
+@model User
+
+
+<section class="relative">
+    <div class="container py-20">
+        <div class="mx-[20%] flex flex-col items-center justify-center gap-10 rounded-2xl bg-slate-900 p-10 shadow-2xl shadow-sky-950">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="border-2 flex items-center gap-2 rounded-lg border-slate-500 bg-slate-900 p-2">
+                    <p class="text-lime-600">@TempData["SuccessMessage"]</p>
+                </div>
+            }
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <div class="border-2 flex items-center gap-2 rounded-lg border-slate-500 bg-slate-900 p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle text-red-400" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+                    </svg>
+                    <p class="text-red-400">@TempData["ErrorMessage"]</p>
+                </div>
+            }
+
+
+            <h1 class="text-2xl font-semibold text-white">LOGIN</h1>
+            <form asp-action="Login" onsubmit="enviarFormulario(event)" id="Form" method="post" class="flex flex-col gap-4">
+                <h2 class="text-white">EMAIL</h2>
+                    <input type="text" asp-for="Email" Id="name" placeholder="Nombre"  class="text-black"/>
+                <h2 class="text-white">PASSWORD</h2>
+                    <input type="password" asp-for="Contrasena" Id="password" value="" class="text-black" />
+                <a href="/Register" class="text-white">               
+                Register
+                </a>
+                <br/>
+                <button class="rounded-full bg-white text-purple-950"> LOGIN</button>
+            </form>
+    
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script>   
+        var intentos = 0;
+
+        function enviarFormulario(e) {
+            intentos ++;
+            e.preventDefault();
+
+			var email = document.getElementById("name").value;
+			var password = document.getElementById("password").value;
+
+            if (email === "" || password === "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'All fields are required!',
+                })
+            }   
+            else {     
+                document.getElementById("Form").submit();
+
+            }
+		}
+
+    </script>
+}
+

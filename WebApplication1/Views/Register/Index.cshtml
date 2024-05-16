@@ -1,0 +1,65 @@
+﻿@model User
+
+
+<section class="relative">
+	 <div class="container py-20">
+		<div class="mx-[20%] flex flex-col items-center justify-center gap-10 rounded-2xl bg-slate-900 p-10 shadow-2xl shadow-sky-950">
+			<h1 class="text-2xl font-semibold text-white">REGISTER</h1>
+
+			<form asp-action="RegisterUser" id="Form" onsubmit="enviarFormulario(event)" method="post" class="flex flex-col gap-4">
+				<h2 class="text-white">Name</h2>
+				<input type="type" asp-for="Nombre" id="name" class="text-black"/>
+				<h2 class="text-white">FirstName</h2>
+				<input type="type" asp-for="Apellido" id="firstname" class="text-black" />
+				<h2 class="text-white">EMAIL</h2>
+				<input type="type" asp-for="Email" id="email" class="text-black" />
+				<h2 class="text-white">PASSWORD</h2>
+				<input type="password" asp-for="Contrasena" id="password" class="text-black" />
+				<h2 class="text-white">CONFIRM PASSWORD</h2>
+				<input type="password" id="confirm_password" class="text-black" />
+				<br />
+				<button  class="rounded-full bg-white text-purple-950"> REGISTER</button>
+				
+			</form>
+		</div>
+	</div>
+
+</section>
+
+@section Scripts{
+<script>
+	function enviarFormulario(e) {
+		e.preventDefault();
+		
+		var name = document.getElementById("name").value;
+		var firstname = document.getElementById("firstname").value;
+		var email = document.getElementById("email").value;
+		var password = document.getElementById("password").value;
+		var confirm_password = document.getElementById("confirm_password").value;
+
+		if( name === "" || firstname === "" || email === "" || password === "" || confirm_password === ""){
+			Swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				text: 'All fields are required!',
+			})
+		}
+		else if(password !== confirm_password){
+			Swal.fire({
+				icon: 'error',
+				title: 'Oops...',
+				text: 'Passwords do not match!',
+			})
+		}
+		else{
+			document.getElementById("Form").submit();
+			Swal.fire({
+				icon: 'success',
+				title: 'Success',
+				text: 'User registered successfully!',
+			})
+		} 
+	}
+		
+</script>
+}

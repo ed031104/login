@@ -1,0 +1,14 @@
+C:\Users\edwin\Desktop\Login\WebApplication1\User\bin\Debug\net8.0\DB.deps.json
+C:\Users\edwin\Desktop\Login\WebApplication1\User\bin\Debug\net8.0\DB.runtimeconfig.json
+C:\Users\edwin\Desktop\Login\WebApplication1\User\bin\Debug\net8.0\DB.dll
+C:\Users\edwin\Desktop\Login\WebApplication1\User\bin\Debug\net8.0\DB.pdb
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\DB.csproj.AssemblyReference.cache
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\DB.AssemblyInfoInputs.cache
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\DB.AssemblyInfo.cs
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\DB.csproj.CoreCompileInputs.cache
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\DB.dll
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\refint\DB.dll
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\DB.pdb
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\DB.genruntimeconfig.cache
+C:\Users\edwin\Desktop\Login\WebApplication1\User\obj\Debug\net8.0\ref\DB.dll
